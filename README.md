@@ -1,10 +1,12 @@
-# Pair WAR, a operating system process thread simulation.
+# Pair WAR
+### An operating system process thread simulation.
 In this project, we are going to build “Pair War”, a game that will make use of pthreads. It is a simple card game with one dealer, 3 players, and a single deck of cards.
 
-# Gamelay
+## Gameplay
 
-Overview: 
-The game is composed of three rounds.
+Overview:
+
+- The game is composed of three rounds.
 
 - At the beginning of each round, the dealer shuffles the cards.
 
@@ -31,7 +33,7 @@ deck.
 
 - The game process finishes after the third round.
 
-# Implementation
+## Implementation
 - This project is to implemented in C using [POSIX threads](https://computing.llnl.gov/tutorials/pthreads)
 
 - The main function creates a thread for the dealer and 3 threads for the players. Notice that we want to keep the threads synchronized to protect any shared objects.
