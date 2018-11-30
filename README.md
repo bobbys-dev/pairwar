@@ -1,4 +1,4 @@
-# Pair WAR
+# Pair War
 ### An operating system process thread simulation.
 In this project, we are going to build “Pair War”, a game that will make use of pthreads. It is a simple card game with one dealer, 3 players, and a single deck of cards.
 
@@ -31,7 +31,7 @@ a card from the deck and compares it to the card they have. If they are a pair, 
 - Once a winner is declared, the first round ends, the dealer will shuffle the deck and hands a card to each player. In the second round, the second player starts drawing a card from the deck. In the third round, the third player starts drawing a card from the
 deck.
 
-- The game process finishes after the third round.
+- The game process finishes after the third round. A single run of the program should have 3 rounds with 3 winners.
 
 ## Implementation
 - This project is to implemented in C using [POSIX threads](https://computing.llnl.gov/tutorials/pthreads)
@@ -40,4 +40,31 @@ deck.
 
 - When a player wins, he/she needs to inform other players so they can exit. Each thread should print a message when it finishes (eg, “Player 1 wins and exits”, “Player 2 exits”, etc.)
 
-- The main program takes a seed as an argument for the random number generation (which will be used in shuffling and in discarding cards ).
+- The main program takes a seed as an argument for the random number generation (which will be used in shuffling and in discarding cards).
+
+## Output
+
+- The dealer and the players will write into a log file each action they talk. The log file should be able to describe exactly what is happening at each step. The log file should look something like this:
+PLAYER 1: hand 5
+PLAYER 1: draws 7
+PLAYER 1: discards 7
+PLAYER 1: hand 5
+DECK: contents of the deck, separated by spaces (e.g., 1 2 3)
+
+- The final messages for a round should look something like:
+PLAYER 2: hand 3
+PLAYER 2: draws 3
+PLAYER 2: hand 3 3
+PLAYER 2: wins
+PLAYER 2: exits round
+PLAYER 1: exits round
+PLAYER 3: exits round
+DEALER: shuffle
+
+- The output of the program to the screen (not in the log file) should indicate the hand for each player,
+the status (win, lost) and the remaining deck of cards:
+HAND card1 card2
+WIN yes (or no)
+DECK contents of the deck, separated by spaces (e.g., 1 2 3)
+
+- The hand of the winner would show the winning pair and the hands of the other players should show only one card.
