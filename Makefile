@@ -1,5 +1,5 @@
 pairwar: main.cpp
-	g++ -Wall -o pairwar main.cpp -lpthread
+	g++ -Wall -o pairwar.o main.cpp -lpthread
 
 clean:
-	rm -rf pairwar
+	rm -rf pairwar.o
