@@ -1,6 +1,6 @@
 # Pair War
 ### An operating system multi-threaded process simulation.
-A game simulating multiple threads using shared resources. Three players attempt to get a match from a single deck of cards.
+A game simulating multiple threads using shared resources (details in Implementation section below). Three players attempt to get a match from a single deck of cards.
 
 ## How to run
 `make`
